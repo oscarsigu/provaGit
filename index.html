@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>INSERT OOING</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">
+				<img src="images/logo.png" id="logo" alt="logo" />
+			</a>
+        <ul>
+            <li class="navOption">Acceso</li>
+            <li class="navOption">Puzzles</li>
+            <li class="navOption">Pictionary</li>
+            <li class="navOption">Retrogames</li>
+        </ul>
+        <img src="images/menu-button.png" id="menu" alt="menu" />
+    </nav>
+    <div class="contenedor" id="Acceso">
+        <img src="images/piggy-bank.svg" id="hucha" alt="hucha" />
+        <img src="images/coin.svg" id="moneda" alt="moneda" />
+        <div id="formulario">
+            <form>
+                <label for="username" id="label-username">Nombre de usuario</label>
+                <input type="text" name="username" id="username" placeholder="Nombre de usuario" />
+                <label for="pass" id="label-pass">Contraseña de acceso</label>
+                <input type="password" name="pass" id="pass" placeholder="Contraseña de acceso" />
+                <button id="entrar">Entrar</button>
+                <a href="#" id="nuevo">Soy nuevo por aquí</a>
+            </form>
+        </div>
+    </div>
+    <div class="contenedor" id="Puzzles">
+        <h3>Puzzles</h3>
+    </div>
+    <div class="contenedor" id="Pictionary">
+        <h3>Pictionary</h3>
+    </div>
+    <div class="contenedor" id="Retrogames">
+        <h3>Retrogames</h3>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        
+    $("#moneda").animate({top: '+=650px'},4000, function(){
+         $("#hucha").attr("src","images/piggy-bank-2.svg");
+    });
+   
+    });
+    $("nav li").hover(function(){
+    $(this).css("background-color", "#566573");
+        $(this).css("color", "#273746");
+    }, function(){
+    $(this).css("background-color", "#273746");
+        $(this).css("color","#566573");
+});
+</script>
+
+</html>
